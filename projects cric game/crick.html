@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+        text-align: center;
+    }
+.btn{
+ color: red;
+ background-color: rgb(124, 241, 78);
+ border: 1px solid blue;
+ 
+ border-radius: 8px;
+ padding: 5px;
+ margin: 0px 2px;
+padding-left: 15px;
+text-align: center;
+}
+
+  </style>
+  <title>cricket random game</title>
+</head>
+<body>
+    <h1>Cricket Game random choices</h1>
+    <button class="btn" onclick="
+    //console.log('User had choosen bat') this comented line writen belowin alret
+    //2nd method of above comented line is writen by any variable like userChiceMsg='User had choosen Bat'
+    let randomNumber=Math.random()*3
+let computerChoice;
+    if(randomNumber>0 && randomNumber<=1){ 
+computerChoice='Bat'
+//console.log('computer choice is bat')
+}else if(randomNumber>1 && randomNumber<=2){ 
+computerChoice='Ball'
+//console.log('computer choice is ball')
+}else{ 
+     computerChoice='Stump'
+//console.log( 'computer choice is stump') 
+  } 
+  //console.log(`Computer choice is ${computerChoice}`) ths comented line also writen belwo in alert
+  let resultMsg;
+ if(computerChoice==='Ball'){ 
+ //console.log('User won.')this comented line below in new varibale resultMsg
+ resultMsg='User won'
+}else if(computerChoice==='Bat'){
+//console.log('its a tie')this comented line below in new varibale resultMsg
+resultMsg='its a ties'    
+}else if(computerChoice==='Stump'){
+    //console.log('computer has won') this comented line below in new varibale resultMsg
+    resultMsg='computer had won'
+}
+alert(` User had choosen bat. Computer choice is ${computerChoice}\n ${resultMsg}`)
+
+">Bat</button>
+
+
+    <button  class="btn"   onclick="
+    //copy// console.log('User had choosen ball') this comented line writen belowin alret
+    // below we removed let in 60 becue we already declaed in above Bat button
+    randomNumber=Math.random()*3
+let computerChoice;
+    if(randomNumber>0 && randomNumber<=1){ 
+computerChoice='Bat'
+//copy/console.log('computer choice is bat')
+}else if(randomNumber>1 && randomNumber<=2){ 
+computerChoice='Ball'
+//copy/console.log('computer choice is ball')
+}else{ 
+     computerChoice='Stump'
+//copy/console.log( 'computer choice is stump') 
+  } 
+  //copy/console.log(`Computer choice is ${computerChoice}`) ths comented line also writen belwo in alert
+   let resultMsg;
+ if(computerChoice==='Ball'){ 
+ //copy/console.log('its a ties .')this comented line below in new varibale resultMsg
+ resultMsg='its a ties'
+}else if(computerChoice==='Bat'){
+//copy/console.log('computer won')this comented line below in new varibale resultMsg
+resultMsg='computer had won'    
+}else if(computerChoice==='Stump'){
+    //copy/console.log('computer has won') this comented line below in new varibale resultMsg
+    resultMsg='User won'
+}
+alert(` User had choosen Ball. Computer choice is ${computerChoice}\n ${resultMsg}`)
+
+">Ball</button>
+<button  class="btn" onclick="
+//copy// console.log('User had choosen Stump') this comented line writen belowin alret
+// below we removed let in 90 becue we already declaed in above Bat button
+randomNumber=Math.random()*3
+let computerChoice;
+if(randomNumber>0 && randomNumber<=1){ 
+computerChoice='Bat'
+//copy/console.log('computer choice is bat')
+}else if(randomNumber>1 && randomNumber<=2){ 
+computerChoice='Ball'
+//copy/console.log('computer choice is ball')
+}else{ 
+ computerChoice='Stump'
+//copy/console.log( 'computer choice is stump') 
+} 
+//copy/console.log(`Computer choice is ${computerChoice}`) ths comented line also writen belwo in alert
+let resultMsg;
+if(computerChoice==='Ball'){ 
+//copy/console.log('computer had won .')this comented line below in new varibale resultMsg
+resultMsg='computer had Won'
+}else if(computerChoice==='Bat'){
+//copy/console.log('User won')this comented line below in new varibale resultMsg
+resultMsg='User won'    
+}else if(computerChoice==='Stump'){
+//copy/console.log('its a tie') this comented line below in new varibale resultMsg
+resultMsg='Its a ties'
+}
+alert(` User had choosen Stump. Computer choice is ${computerChoice}\n ${resultMsg}`)
+
+"
+>stump</button>
+</body>
+</html>
+<!-- 4,43 -->
