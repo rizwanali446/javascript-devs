@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Functions examples</title>
+</head>
+<body>
+    <script>
+    //1
+    /*let age=21;
+    function printAge(){
+        console.log (`ur age is ${age}`)
+    }
+printAge()
+age=76
+printAge()
+age=1
+printAge()*/
+//2 now we understand function with return statment
+/*function genrateRandomMove(){
+    let random=Math.random();
+    let randomMove=random*3;
+    return randomMove
+}
+console.log(genrateRandomMove())
+console.log(genrateRandomMove())
+console.log(genrateRandomMove())
+console.log(genrateRandomMove())*/
+//3   prefrence is used any variable like status insted of return
+/*function determineDriveStatus(){
+    let age=17;
+    let status;
+    if(age>18){
+status='you can drive the car'
+    }else{
+        status='Ride a bicyle'
+    }
+return status
+
+}
+console.log(determineDriveStatus())*/
+//4 prefernce of return in function
+function determineDriveStatus(){
+    let age=19;
+    if(age===undefined){
+        return 'u r small child'
+    }
+    console.log('checking a drice status')
+    //let status; no need to use status we use only return
+    if(age>18){
+return'you can drive the car'
+    }else{
+        return'Ride a bicyle'
+    }
+
+
+}
+console.log(determineDriveStatus())
+
+
+
+</script>
+</body>
+</html>
+<!-- 5.47 -->
