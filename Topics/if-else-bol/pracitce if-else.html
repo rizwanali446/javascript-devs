@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ticket Rail exercise</title>
+</head>
+<body>
+    <script>
+        let age=80;
+        let gender='female'; //male or female
+       let finalDiscount;
+      if (age <= 5){
+          finalDiscount=100;
+        // } else if(gender==='female'){
+        //     finalDiscount=50;
+        // }else if(age <= 8 ){
+        //     finalDiscount=50;
+        // } or below we add short code
+      }else if( gender==='female' || age<=8){
+        finalDiscount=50
+      }
+        else if(age >= 65){
+            finalDiscount=20;
+        }else{
+            finalDiscount=0;
+        }
+        console.log(`you have gotten discount ${finalDiscount}`)
+    </script>
+</body>
+</html>
