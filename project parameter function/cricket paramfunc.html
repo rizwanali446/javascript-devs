@@ -1,9 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Cricket game with parameters functions</title>
+    <style>
+        body{
+            text-align: center;
+            .btn{
+                color: rgb(247, 228, 125);
+                background-color: black;
+                border-radius: 5rem;
+                padding: 0.5rem;
+
+            }
+        }
+    </style>
+<title>cricket game functions with parameters</title>
 </head>
 <body>
-    <h1>Cricket game with parameters functions</h1>
+    <h2>cricket game functions with parameter</h2>
+    <h2>Cricket game without global variable computerChoice only use return</h2>
+    <button class="btn" onclick="
+    //console.log('User had choosen bat') this comented line writen belowin alret
+    //2nd method of above comented line is writen by any variable like userChiceMsg='User had choosen Bat'
+    let computerChoice=genrateCompChoice();
+  //console.log(`Computer choice is ${computerChoice}`) ths comented line also writen belwo in alert
+ let resultMsg=getResult('Bat',computerChoice);
+ showResult('Bat',computerChoice,resultMsg);
+">Bat</button>
+
+
+    <button  class="btn"   onclick="
+    //copy// console.log('User had choosen ball') this comented line writen belowin alret
+    // below we removed let in 60 becue we already declaed in above Bat button
+    computerChoice=genrateCompChoice()
+     resultMsg=getResult('Ball',computerChoice)
+     showResult('Ball',computerChoice,resultMsg);
+
+">Ball</button>
+<button  class="btn" onclick="
+//copy// console.log('User had choosen Stump') this comented line writen belowin alret
+// below we removed let in 90 becue we already declaed in above Bat button
+computerChoice=genrateCompChoice()
+resultMsg=getResult('Stump', computerChoice)
+showResult('Stump',computerChoice,resultMsg);
+"
+>stump</button>
+<script>
+    function genrateCompChoice(){
+        let randomNumber=Math.random()*3
+
+    if(randomNumber>0 && randomNumber<=1){ 
+//computerChoice='Bat' we use return below
+return 'Bat'
+//console.log('computer choice is bat')
+}else if(randomNumber>1 && randomNumber<=2){ 
+//computerChoice='Ball'
+return 'Ball'
+//console.log('computer choice is ball')
+}else{ 
+    // computerChoice='Stump'
+return 'Stump'
+    //console.log( 'computer choice is stump') 
+  } 
+    }
+    function  getResult(userMove,computerMove){
+       
+        if (userMove=== 'Bat'){ 
+            if(computerMove==='Ball'){ 
+        //console.log('User won.')this comented line below in new varibale resultMsg
+        return 'User won'
+        }else if(computerMove==='Bat'){
+        //console.log('its a tie')this comented line below in new varibale resultMsg
+        return'its a ties'    
+        }else if(computerMove==='Stump'){
+            //console.log('computer has won') this comented line below in new varibale resultMsg
+    return 'computer had won'
+}
+
+
+    }else if(userMove=='Ball'){
+  //let resultMsg  this line wil be comneted due to use of return below
+ if(computerMove==='Ball'){ 
+ //copy/console.log('its a ties .')this comented line below in new varibale resultMsg
+ //resultMsg='its a ties' comentd due to below use return
+ return 'its a ties'
+}else if(computerMove==='Bat'){
+//copy/console.log('computer won')this comented line below in new varibale resultMsg
+//resultMsg='computer had won' comented due below use return    
+return 'Computer or pc had won'
+}else if(computerMove==='Stump'){
+    //copy/console.log('computer has won') this comented line below in new varibale resultMsg
+    //resultMsg='User won' comentd due to below use return
+    return 'User won won'
+}
+
+
+    } else if ( userMove==='Stump'){ 
+    
+        if(computerMove==='Ball'){ 
+//copy/console.log('computer had won .')this comented line below in new varibale resultMsg
+         return'computer had Won'
+        }else if(computerMove==='Bat'){
+//copy/console.log('User won')this comented line below in new varibale resultMsg
+        return'User won'    
+        }else if(computerMove==='Stump'){
+//copy/console.log('its a tie') this comented line below in new varibale resultMsg
+         return'Its a ties'
+}
+    
+    }}
+    function showResult(userMove,computerMove,result){ 
+        alert(` User had choosen to ${userMove}. Computer choice is ${computerMove}\n ${result}`)
+ 
+    
+    }
+    
+</script>
 </body>
 </html>
+<!-- ended 6,24-->
