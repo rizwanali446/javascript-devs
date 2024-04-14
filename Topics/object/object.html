@@ -12,7 +12,7 @@
 <body>
     <h1 >objects and inside of objects</h1>
     <script>
-        // 1 only object example
+    // 1 only object example
        /* let product={
             company:'Jeans',
             price: 891,
@@ -32,24 +32,44 @@
         //or delet anything from object product
         delete product.company
         console.log(product)*/
-   //2 inside object
+   //2 Topoic: inside object
    let product={
             company:'Jeans',
             price: 891,
             item_name:'T-Shirt',
-           // rating:{
+           // rating:{ 
              //   stars:4.5,
-               // noOfReveiws:87
+               // noOfReveiws:87}
             
 displayPrice:function(){ 
 console.log(`Price of the product is $${product.price}`);
  } };
- //3 conversion of primitive to mehtod .length or .toUpperCase()
+ //3 Topic:conversion of primitive to mehtod or objects e.g .length or .toUpperCase()
 product.displayPrice()
 console.log('This is our first tutorials coming soon....'.length)
 //console.log('This is our first tutorials coming soon....'.toUpperCase())
 console.log('This is our first tutorials coming'.replace('coming',  'Soon as youtube tutorials'))
+//4 1st e.g Topic object Refrences
+/*let a=5;
+let b=a;
+console.log(`a=${a},b=${b}`);
+let a=8;
+console.log(`a=${a},b=${b}`);*/
+//2nd e.g
+   let x={num:7};
+   let y=x;    // below ans will be x=7 , y=7
+   console.log(`x=${x.num},y=${y.num}`)
+x.num=10  // below ans will be x=10, y=10
+   console.log(`x=${x.num},y=${y.num}`)
+   //3rd e.g ==  ans below return false becuse == see as object comparison false
+   // however we make deep equal function to make it true       
+let p={pop: 'happy'};
+let q={pop: 'happy'};
+console.log(p===q)
+//4rth e.g destructuring or object shortcuts
+
+
     </script>
 </body>
 </html>
-<!-- 7,03 -->
+<!-- ended 7,03 to 15 -->

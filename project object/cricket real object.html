@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+            .btn{
+                color: rgb(247, 228, 125);
+                background-color: black;
+                border-radius: 5rem;
+                padding: 0.5rem;
+
+            }
+        }
+    </style>
+<title>cricket game functions with parameters</title>
+</head>
+<body>
+    <h2>cricket game functions with parameter</h2>
+    <h2>Cricket game without global variable computerChoice only use return</h2>
+    <h3> cricket game with using object to show how many times user or computer win, lost and ties</h3>
+<h4>and also we add function inside of  already used scroe object</h4>
+<button class="btn" onclick="
+     
+
+    let computerChoice=genrateCompChoice();
+  
+    let resultMsg=getResult('Bat',computerChoice);
+     showResult('Bat',computerChoice,resultMsg);
+     ">Bat</button>
+
+
+    <button  class="btn"   onclick="
+
+    computerChoice=genrateCompChoice()
+     resultMsg=getResult('Ball',computerChoice)
+     showResult('Ball',computerChoice,resultMsg);
+
+">Ball</button>
+<button  class="btn" onclick="
+computerChoice=genrateCompChoice()
+resultMsg=getResult('Stump', computerChoice)
+showResult('Stump',computerChoice,resultMsg);
+"
+>stump</button>
+<script>
+let score={
+win:0,
+lost:0,
+tie:0,
+displayScore(){
+    return `No of oneday mathces
+     won:${score.win},
+    Lost:${score.lost},
+    Ties: ${score.tie}`
+}
+}
+
+    function genrateCompChoice(){
+        let randomNumber=Math.random()*3
+
+    if(randomNumber>0 && randomNumber<=1){ 
+//computerChoice='Bat' we use return below
+return 'Bat'
+//console.log('computer choice is bat')
+}else if(randomNumber>1 && randomNumber<=2){ 
+//computerChoice='Ball'
+return 'Ball'
+//console.log('computer choice is ball')
+}else{ 
+    // computerChoice='Stump'
+return 'Stump'
+    //console.log( 'computer choice is stump') 
+  } 
+    }
+    function  getResult(userMove,computerMove){
+       
+        if (userMove=== 'Bat'){ 
+            if(computerMove==='Ball'){ 
+                // score.win=score.win+1   or below
+                // score.win +=1;   or below
+                score.win++;
+              return 'User had Won'
+        }else if(computerMove==='Bat'){
+       score.tie++;
+            return'its a ties'    
+
+        }else if(computerMove==='Stump'){
+        score.lost++;
+            return 'computer had won'
+}
+
+
+    }else if(userMove=='Ball'){
+  //let resultMsg  this line wil be comneted due to use of return below
+ if(computerMove==='Ball'){ 
+ //copy/console.log('its a ties .')this comented line below in new varibale resultMsg
+ //resultMsg='its a ties' comentd due to below use return
+ score.tie++;
+ return 'its a ties'
+}else if(computerMove==='Bat'){
+//copy/console.log('computer won')this comented line below in new varibale resultMsg
+//resultMsg='computer had won' comented due below use return    
+score.lost++;
+return 'Computer or pc had won'
+}else if(computerMove==='Stump'){
+    //copy/console.log('computer has won') this comented line below in new varibale resultMsg
+    //resultMsg='User won' comentd due to below use return
+    score.win++;
+    return 'User won won'
+}
+
+
+    } else if ( userMove==='Stump'){ 
+    
+        if(computerMove==='Ball'){ 
+//copy/console.log('computer had won .')this comented line below in new varibale resultMsg
+score.lost++;         
+return'computer had Won'
+        }else if(computerMove==='Bat'){
+//copy/console.log('User won')this comented line below in new varibale resultMsg
+score.win++;       
+return'User won'    
+        }else if(computerMove==='Stump'){
+//copy/console.log('its a tie') this comented line below in new varibale resultMsg
+score.tie++        
+return'Its a ties'
+}
+    
+    }}
+    // now below we create another function showResult() to alert show the messages on clikec button 
+    function showResult(userMove,computerMove,result){ 
+        console.log(score)
+        alert(` User had choosen to ${userMove}. Computer choice is ${computerMove}\n ${result}
+       Score: below  lines updated:
+       ${score.displayScore()}
+        `)
+ 
+    /* this below line removed and replce abve by displayScore()
+    won:${score.win}, 
+    lost:${score.lost},
+        tie:${score.tie}*/
+    }
+    
+</script>
+</body>
+</html>
+<!-- ended 6,24-->
