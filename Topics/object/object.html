@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+            color:rgb(12, 170, 118)
+        }
+    </style>
+<title>Object & inside of object</title>
+</head>
+<body>
+    <h1 >objects and inside of objects</h1>
+    <script>
+        // 1 only object example
+       /* let product={
+            company:'Jeans',
+            price: 891,
+            item_name:'T-Shirt'
+        };
+        console.log(product);
+        console.log(product.company);
+        console.log(product.item_name);
+        product.company='Banana';
+        console.log(product)
+    //or
+    console.log(product['price'])
+    console.log(product['item_name'])
+    //or take item name as variable propertyName and return agin
+     let propertyName='item_name';
+    console.log(product[propertyName])
+        //or delet anything from object product
+        delete product.company
+        console.log(product)*/
+   //2 inside object
+   let product={
+            company:'Jeans',
+            price: 891,
+            item_name:'T-Shirt',
+           // rating:{
+             //   stars:4.5,
+               // noOfReveiws:87
+            
+displayPrice:function(){ 
+console.log(`Price of the product is $${product.price}`);
+ } };
+ //3 conversion of primitive to mehtod .length or .toUpperCase()
+product.displayPrice()
+console.log('This is our first tutorials coming soon....'.length)
+//console.log('This is our first tutorials coming soon....'.toUpperCase())
+console.log('This is our first tutorials coming'.replace('coming',  'Soon as youtube tutorials'))
+    </script>
+</body>
+</html>
+<!-- 7,03 -->
